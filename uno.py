@@ -39,3 +39,18 @@ def shuffle_deck(deck):
 
 shuffled_deck = shuffle_deck(deck)
 
+def players():
+    print("="*20, "Welcome to UNO, The 4 player card game!", "="*20)
+    print("=="*40, "\n")
+    numOf_players = int(input("How many players in the game?: "))
+    if  numOf_players > 4 or numOf_players < 1:
+        print("You need a minimum of 1 player and a maximum of 4 players")
+    else:
+        for player in range(numOf_players):
+            print(f"Player {player} get ready to receive your hand")
+        return numOf_players
+
+players()
+game_players = players()
+
+
