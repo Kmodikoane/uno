@@ -72,13 +72,26 @@ def deal_cards(game_players, shuffled_deck):
     Returns: dictionary of cards for each player
     """
     players_with_cards = {} 
-    for card in  range(7):
+    for player in range(1, game_players + 1):
         players_with_cards[player] = []
-
-        players_with_cards[player].append(shuffled_deck.pop(7))
-
+   
+        for card_drawn in  range(7):
+            players_with_cards[player].append(shuffled_deck.pop())
     
-    return
+    return players_with_cards
 
+players_with_cards = deal_cards(game_players, shuffled_deck)
+
+def show_hand(players_with_cards):
+    """
+    Show each players hand
+    Parameters: player with dealt cards -> dict
+    Returns: None
+    Print player hand
+    """
+    for player in players_with_cards:
+        print(f"Player {player}: Cards: {players_with_cards[player]}")
+
+show_hand(players_with_cards)
 
 
