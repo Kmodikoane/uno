@@ -40,6 +40,13 @@ def shuffle_deck(deck):
 shuffled_deck = shuffle_deck(deck)
 
 def players():
+    """
+    Program
+        Print Uno welcome message 
+        Accept user input as the number of players in the game
+    Parameters: None 
+    Returns: numOf_players -> int
+    """
     print("="*20, "Welcome to UNO, The 4 player card game!", "="*20)
     print("=="*40, "\n")
     numOf_players = int(input("How many players in the game?: "))
@@ -52,5 +59,18 @@ def players():
 
 players()
 game_players = players()
+
+def deal_cards(game_players, shuffle_deck):
+    """
+    Deals cards to players
+    Parameters:
+        game_players -> int
+        shuffle_deck -> list
+    Returns: dictionary of cards for each player
+    """
+    players_with_cards = {} 
+    for player in  range(game_players):
+        player
+    return
 
 
