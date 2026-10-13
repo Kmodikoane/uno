@@ -54,12 +54,12 @@ def players():
     while True:
         answer = input("How many players in the game?: ")
 
-        if answer.isdigit() and 1< int(answer) <= 4: #Check if user inputs is looks like a number eg: "6"
+        if answer.isdigit() and 1<= int(answer) <= 4: #Check if user inputs is looks like a number eg: "6"
             #convert to an int
             print("Players get ready to play UNO!")
             return int(answer)
         
-        print("This is a 2-4 player games \n")
+        print("This is a 1-4 player games \n")
 
 game_players = players()
 
@@ -72,8 +72,12 @@ def deal_cards(game_players, shuffled_deck):
     Returns: dictionary of cards for each player
     """
     players_with_cards = {} 
-    for player in  range(game_players):
-        player
+    for card in  range(7):
+        players_with_cards[player] = []
+
+        players_with_cards[player].append(shuffled_deck.pop(7))
+
+    
     return
 
 
