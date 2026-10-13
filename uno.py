@@ -1,3 +1,5 @@
+import random
+
 def build_deck():
     """
     This function reutrn a deck of 108 cards
@@ -19,7 +21,21 @@ def build_deck():
     for i in range(4):
         card_Deck.append("wild")
         card_Deck.append("wild draw four")
-    print(len(card_Deck))
+    
     return card_Deck
 
-build_deck()
+deck = build_deck()
+
+def shuffle_deck(deck):
+    """
+    This function shuffles the deck of cards
+    Parameters: deck -> list
+    Return: shuffled deck of cards -> list
+    """
+    random.shuffle(deck)
+    shuffled_deck = deck
+    random.shuffle(shuffled_deck)
+    return shuffled_deck
+
+shuffled_deck = shuffle_deck(deck)
+
