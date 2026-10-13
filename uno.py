@@ -90,8 +90,17 @@ def show_hand(players_with_cards):
     Print player hand
     """
     for player in players_with_cards:
-        print(f"Player {player}: Cards: {players_with_cards[player]}")
+        print(f"\nPlayer {player}: Cards: {players_with_cards[player]}")
 
 show_hand(players_with_cards)
+
+def play_cards(shuffled_deck):
+    discard_pile = []
+
+    for card in shuffled_deck:
+        if card != "wild_card" or card != "wild draw four"
+
+play_cards(shuffled_deck)
+
 
 
